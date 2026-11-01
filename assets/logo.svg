@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 68" fill="none" role="img" aria-label="Polat Dekorasyon Logo">
+  <defs>
+    <linearGradient id="navyBox" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#132B4B"/>
+      <stop offset="100%" stop-color="#091628"/>
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#F2B21B"/>
+      <stop offset="100%" stop-color="#D99407"/>
+    </linearGradient>
+  </defs>
+  <!-- Emblem Box -->
+  <rect x="2" y="2" width="64" height="64" rx="15" fill="url(#navyBox)" stroke="#F2B21B" stroke-opacity="0.38" stroke-width="1.5"/>
+  <!-- Architectural Roof with Chimney -->
+  <path d="M20 18H24.5V24.5H20V18Z" fill="url(#goldAccent)"/>
+  <path d="M11 30L34 13.5L57 30H50.5L34 18.2L17.5 30H11Z" fill="url(#goldAccent)"/>
+  <path d="M23 28L34 20.2L45 28" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Gold Pillar + P Bowl with Window Cross -->
+  <path d="M25 30.5H30.5V45.5L35 45.5L30.5 49.5V55H25V30.5Z" fill="url(#goldAccent)"/>
+  <path d="M33 30.5H39.5C46.4 30.5 51.5 35.1 51.5 41.2C51.5 47.3 46.4 51.8 39.5 51.8H35.5V56L32 53V47.3H39.2C43.4 47.3 46.5 44.8 46.5 41.2C46.5 37.6 43.4 35 39.2 35H33V30.5Z" fill="#FFFFFF"/>
+  <rect x="33" y="36.5" width="3" height="9.5" rx="0.5" fill="url(#goldAccent)"/>
+  <rect x="37.5" y="34.5" width="2" height="13.5" fill="#FFFFFF"/>
+  <rect x="36" y="40.2" width="11" height="2" fill="#FFFFFF"/>
+
+  <!-- Wordmark -->
+  <text x="80" y="34" fill="#FFFFFF" font-family="'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif" font-size="25" font-weight="800" letter-spacing="1.4">POLAT</text>
+  <text x="81" y="53" fill="#F2B21B" font-family="'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" letter-spacing="3.8">DEKORASYON</text>
+  <rect x="186" y="17" width="1.5" height="18" rx="0.75" fill="#F2B21B" fill-opacity="0.45"/>
+  <text x="196" y="25.5" fill="#94A3B8" font-family="'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="600" letter-spacing="1.1">İNŞAAT &amp;</text>
+  <text x="196" y="36.5" fill="#CBD5E1" font-family="'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="600" letter-spacing="1.1">TADİLAT</text>
+</svg>

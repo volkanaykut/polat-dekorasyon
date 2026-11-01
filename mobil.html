@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Polat Dekorasyon — Mobil Görünüm Önizleme</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background: radial-gradient(circle at 20% 20%, #152d4e 0%, #07111f 70%);
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 16px 32px;
+    }
+    .preview-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      background: rgba(11, 25, 44, 0.88);
+      border: 1px solid rgba(242, 178, 27, 0.3);
+      padding: 10px 16px;
+      border-radius: 14px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+    .toolbar-title {
+      font-weight: 800;
+      font-size: 0.92rem;
+      color: #fbbf24;
+      margin-right: 6px;
+    }
+    .size-btn {
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #cbd5e1;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 7px 13px;
+      border-radius: 9px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .size-btn:hover,
+    .size-btn.active {
+      background: #f2b21b;
+      color: #07111f;
+      border-color: #f2b21b;
+    }
+    .desktop-link {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #4ade80;
+      text-decoration: none;
+      padding: 7px 12px;
+      border-radius: 9px;
+      background: rgba(37, 211, 102, 0.12);
+      border: 1px solid rgba(37, 211, 102, 0.35);
+    }
+    .desktop-link:hover {
+      background: rgba(37, 211, 102, 0.22);
+    }
+    .preview-stage {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .phone-shell {
+      position: relative;
+      box-sizing: content-box;
+      display: flex;
+      flex-direction: column;
+      background: #050b14;
+      border: 10px solid #1e293b;
+      outline: 2px solid rgba(242, 178, 27, 0.38);
+      border-radius: 42px;
+      box-shadow: 0 30px 75px rgba(0, 0, 0, 0.65);
+      overflow: hidden;
+      transition: width 0.28s ease, height 0.28s ease;
+      width: 390px;
+      height: 820px;
+    }
+    .phone-statusbar {
+      height: 30px;
+      flex-shrink: 0;
+      background: #07111f;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #cbd5e1;
+      user-select: none;
+    }
+    .phone-notch {
+      width: 86px;
+      height: 17px;
+      background: #02060d;
+      border-radius: 999px;
+      box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.06);
+    }
+    .phone-shell iframe {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #0b192c;
+    }
+    .wifi-card {
+      max-width: 300px;
+      background: rgba(11, 25, 44, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 20px;
+      margin-top: 12px;
+    }
+    .wifi-card h2 {
+      font-size: 1rem;
+      color: #fbbf24;
+      margin-bottom: 8px;
+    }
+    .wifi-card p {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+    .wifi-url {
+      display: block;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px dashed rgba(242, 178, 27, 0.5);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 0.9rem;
+      padding: 10px 12px;
+      border-radius: 10px;
+      text-align: center;
+      text-decoration: none;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-toolbar">
+    <span class="toolbar-title">📱 Mobil Görünüm Simülatörü</span>
+    <button type="button" class="size-btn" data-w="360" data-h="780">Android (360px)</button>
+    <button type="button" class="size-btn active" data-w="390" data-h="820">iPhone (390px)</button>
+    <button type="button" class="size-btn" data-w="430" data-h="860">Büyük Ekran (430px)</button>
+    <a href="index.html" class="desktop-link">Tam Ekran Siteyi Aç ↗</a>
+  </div>
+
+  <div class="preview-stage">
+    <div class="phone-shell" id="phoneShell">
+      <div class="phone-statusbar" aria-hidden="true">
+        <span>09:41</span>
+        <div class="phone-notch"></div>
+        <span>5G • 100%</span>
+      </div>
+      <iframe src="index.html?v=10" title="Polat Dekorasyon Mobil Önizleme"></iframe>
+    </div>
+
+    <aside class="wifi-card">
+      <h2>Gerçek Telefondan Test Edin</h2>
+      <p id="wifiDesc">Bilgisayarınız ile aynı Wi-Fi ağına bağlı telefonunuzun tarayıcısından aşağıdaki adrese girerek siteyi doğrudan kendi telefonunuzda açabilirsiniz:</p>
+      <a href="http://192.168.1.106:8080/" class="wifi-url" id="lanLink">http://192.168.1.106:8080/</a>
+    </aside>
+  </div>
+
+  <script>
+    const shell = document.getElementById('phoneShell');
+    document.querySelectorAll('.size-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.size-btn').forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        shell.style.width = btn.dataset.w + 'px';
+        shell.style.height = btn.dataset.h + 'px';
+      });
+    });
+
+    if (location.hostname && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+      const liveUrl = new URL('./', location.href).href;
+      const lanLink = document.getElementById('lanLink');
+      const wifiDesc = document.getElementById('wifiDesc');
+      if (lanLink) {
+        lanLink.href = liveUrl;
+        lanLink.textContent = liveUrl;
+      }
+      if (wifiDesc) {
+        wifiDesc.textContent = 'Telefonunuzun tarayıcısından aşağıdaki canlı bağlantıyı açarak siteyi doğrudan kendi telefonunuzda inceleyebilirsiniz:';
+      }
+    }
+  </script>
+</body>
+</html>

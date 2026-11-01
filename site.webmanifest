@@ -1,0 +1,22 @@
+{
+  "name": "Polat Dekorasyon İskenderun - Kadir Usta",
+  "short_name": "Polat Dekorasyon",
+  "description": "İskenderun ve yakın bölgesinde fayans, boya, alçıpan, asma tavan, duvar örme, sıva, mantolama ve şap hizmetleri.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0B192C",
+  "theme_color": "#0B192C",
+  "lang": "tr",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "assets/polat-dekorasyon-logo.jpg",
+      "sizes": "800x800",
+      "type": "image/jpeg"
+    }
+  ]
+}

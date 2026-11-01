@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <url>
+    <loc>https://polatdekorasyon.com/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://polatdekorasyon.com/assets/hero-luxury-interior.jpg</image:loc>
+      <image:title>Polat Dekorasyon İskenderun Lüks İç Mekan Tadilat, Mermer Fayans ve LED Asma Tavan</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://polatdekorasyon.com/assets/polat-dekorasyon-afis-hd.jpg</image:loc>
+      <image:title>Polat Dekorasyon Kadir Usta İskenderun İnşaat ve Tadilat Hizmetleri</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://polatdekorasyon.com/assets/iskenderun-fayans-seramik.jpg</image:loc>
+      <image:title>İskenderun Fayans ve Seramik Ustası - Polat Dekorasyon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://polatdekorasyon.com/assets/iskenderun-asma-tavan-alcipan.jpg</image:loc>
+      <image:title>İskenderun Asma Tavan, Alçıpan ve Boya Ustası</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://polatdekorasyon.com/assets/iskenderun-dis-cephe-mantolama-boya.jpg</image:loc>
+      <image:title>İskenderun Dış Cephe Mantolama ve Isı Yalıtımı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://polatdekorasyon.com/assets/iskenderun-duvar-orme-siva-sap.jpg</image:loc>
+      <image:title>İskenderun Duvar Örme, Sıva ve Zemin Şap Ustası</image:title>
+    </image:image>
+  </url>
+</urlset>
