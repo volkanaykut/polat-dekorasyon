@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /mobil.html
 
-Sitemap: https://polatdekorasyon.com/sitemap.xml
+Sitemap: https://volkanaykut.github.io/polat-dekorasyon/sitemap.xml

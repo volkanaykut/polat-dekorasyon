@@ -61,6 +61,10 @@ main {
   background-color: var(--white);
 }
 
+picture {
+  display: contents;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -72,7 +76,8 @@ a {
   text-decoration: none;
 }
 
-ul {
+ul,
+ol {
   list-style: none;
 }
 
@@ -2246,6 +2251,380 @@ ul {
 
   .services-grid,
   .areas-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Local SEO Enhancements: Showcase Links, Regional Map & Service Subpages
+   ========================================================================== */
+
+.showcase-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--navy-800);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.showcase-card:hover .showcase-link,
+.showcase-link:hover {
+  color: var(--gold-600);
+  transform: translateX(3px);
+}
+
+.service-links-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.service-detail-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--slate-500);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition);
+}
+
+.service-detail-link:hover {
+  color: var(--navy-900);
+}
+
+/* Regional Google Map & Neighborhood Authority Box */
+.seo-map-card {
+  margin-top: 28px;
+  background: var(--white);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+}
+
+.seo-map-info {
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.seo-map-info h3 {
+  font-size: 1.24rem;
+  font-weight: 800;
+  color: var(--navy-900);
+  line-height: 1.3;
+}
+
+.seo-map-info p {
+  font-size: 0.92rem;
+  color: var(--slate-600);
+}
+
+.seo-neighborhoods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.seo-neighborhood-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--navy-800);
+  background: var(--slate-100);
+  border: 1px solid var(--slate-200);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.seo-map-frame {
+  min-height: 290px;
+  background: var(--slate-100);
+  position: relative;
+}
+
+.seo-map-frame iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 290px;
+  border: 0;
+  display: block;
+}
+
+/* Dedicated SEO Service Subpage Styles */
+.subhero {
+  position: relative;
+  background-color: var(--navy-950);
+  color: var(--white);
+  padding: 54px 0 60px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(242, 178, 27, 0.26);
+}
+
+.subhero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 30%, rgba(242, 178, 27, 0.14) 0%, transparent 48%),
+    linear-gradient(96deg, rgba(5, 11, 20, 0.93) 0%, rgba(7, 16, 30, 0.85) 48%, rgba(11, 25, 44, 0.52) 100%);
+}
+
+.breadcrumb-nav {
+  margin-bottom: 18px;
+  font-size: 0.82rem;
+  color: var(--slate-300);
+}
+
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb-list a {
+  color: var(--gold-400);
+  font-weight: 600;
+}
+
+.breadcrumb-list a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-sep {
+  opacity: 0.45;
+}
+
+.subhero-title {
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+  font-weight: 800;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  max-width: 780px;
+  text-shadow: 0 8px 26px rgba(0, 0, 0, 0.5);
+}
+
+.subhero-lead {
+  font-size: 1.05rem;
+  color: rgba(241, 245, 249, 0.92);
+  max-width: 680px;
+  margin-bottom: 26px;
+}
+
+.seo-content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+  gap: 44px;
+  align-items: start;
+}
+
+.seo-prose h2 {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--navy-900);
+  margin-bottom: 14px;
+  line-height: 1.26;
+}
+
+.seo-prose h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--navy-900);
+  margin: 28px 0 12px;
+}
+
+.seo-prose p {
+  color: var(--slate-700);
+  font-size: 0.98rem;
+  margin-bottom: 16px;
+  line-height: 1.72;
+}
+
+.seo-check-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0 26px;
+}
+
+.seo-check-card {
+  background: var(--slate-50);
+  border: 1px solid var(--slate-200);
+  border-left: 4px solid var(--gold-500);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.seo-check-card strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--navy-900);
+  margin-bottom: 4px;
+}
+
+.seo-check-card span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--slate-600);
+  line-height: 1.45;
+}
+
+.seo-sidebar-card {
+  background: var(--navy-900);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 26px 24px;
+  border: 1px solid rgba(242, 178, 27, 0.35);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 96px;
+}
+
+.seo-sidebar-card h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--gold-400);
+  margin-bottom: 10px;
+}
+
+.seo-sidebar-card p {
+  font-size: 0.9rem;
+  color: var(--slate-300);
+  margin-bottom: 18px;
+}
+
+.seo-sidebar-list {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 0.88rem;
+  color: var(--slate-200);
+}
+
+.seo-sidebar-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.seo-sidebar-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+}
+
+.related-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.related-card {
+  background: var(--white);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-md);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.related-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-500);
+}
+
+.related-card h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--navy-900);
+}
+
+.related-card p {
+  font-size: 0.88rem;
+  color: var(--slate-600);
+  flex-grow: 1;
+}
+
+.related-card span {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--gold-600);
+}
+
+@media (max-width: 1060px) {
+  .seo-map-card,
+  .seo-content-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .seo-sidebar-card {
+    position: static;
+  }
+
+  .related-services-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .service-detail-link {
+    display: none;
+  }
+
+  .showcase-link {
+    font-size: 0.82rem;
+    margin-top: 8px;
+  }
+
+  .seo-map-info {
+    padding: 20px 16px;
+  }
+
+  .seo-map-info h3 {
+    font-size: 1.08rem;
+  }
+
+  .seo-neighborhoods {
+    gap: 6px;
+  }
+
+  .seo-neighborhood-tag {
+    font-size: 0.74rem;
+    padding: 3px 9px;
+  }
+
+  .seo-map-frame,
+  .seo-map-frame iframe {
+    min-height: 230px;
+  }
+
+  .subhero {
+    padding: 32px 0 38px;
+  }
+
+  .subhero-title {
+    font-size: 1.58rem;
+  }
+
+  .subhero-lead {
+    font-size: 0.94rem;
+  }
+
+  .seo-check-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 }

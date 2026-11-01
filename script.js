@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
   serviceCheckboxes.forEach((cb) => {
     cb.addEventListener('change', syncChipClasses);
   });
+  syncChipClasses();
 
   document.querySelectorAll('.service-cta[data-service]').forEach((cta) => {
     cta.addEventListener('click', () => {
